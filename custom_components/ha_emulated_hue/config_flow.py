@@ -101,9 +101,8 @@ class HaEmulatedHueOptionsFlow(OptionsFlow):
         if devices:
             lines: list[str] = []
             for device in sorted(devices, key=lambda d: int(d.hue_id)):
-                entity_info = f" > {device.entity_id}" if device.entity_id else " (unlinked)"
-                lines.append(f"{device.name} (ID {device.hue_id}){entity_info}")
-                lines.append(f"    Last: {_format_last_access(device)}")
+                access = _format_last_access(device)
+                lines.append(f"[{device.hue_id}] {device.name} ({access})")
             device_list = "\n".join(lines)
         else:
             device_list = "No devices configured yet."
