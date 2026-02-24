@@ -1,0 +1,37 @@
+reload:
+  name: Reload
+  description: Reload the Emulated Hue + integration and re-read device data from storage.
+
+test_create_device:
+  name: Create Test Device
+  description: Create a new virtual Hue device for testing purposes.
+  fields:
+    name:
+      name: Device Name
+      description: The name for the new Hue device (used by Alexa).
+      required: false
+      default: "Test Device"
+      example: "Living Room Light"
+      selector:
+        text:
+    entity_id:
+      name: Entity ID
+      description: The Home Assistant entity to link to this Hue device.
+      required: false
+      example: "light.living_room"
+      selector:
+        entity:
+          domain:
+            - light
+            - switch
+            - fan
+            - cover
+            - climate
+            - media_player
+            - script
+            - scene
+            - input_boolean
+
+test_list_devices:
+  name: List Devices
+  description: Log all current Hue devices to the Home Assistant log.

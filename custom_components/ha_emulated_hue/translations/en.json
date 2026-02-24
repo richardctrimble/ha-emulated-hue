@@ -1,0 +1,103 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Emulated Hue + Setup",
+        "description": "Set up the emulated Hue bridge for Alexa control.\n\n**Warning:** Make sure to disable the built-in **emulated_hue** integration first!",
+        "data": {
+          "listen_port": "Listen port",
+          "advertise_ip": "Advertise IP (optional)",
+          "advertise_port": "Advertise port (optional)"
+        },
+        "data_description": {
+          "listen_port": "Port for the emulated Hue bridge. Use 80 for Alexa compatibility.",
+          "advertise_ip": "IP address to advertise to Alexa. Leave empty for auto-detect.",
+          "advertise_port": "Port to advertise to Alexa. Leave empty to use the listen port."
+        }
+      }
+    },
+    "error": {
+      "existing_emulated_hue": "The built-in emulated_hue integration is active. Please remove it first before setting up Emulated Hue +."
+    },
+    "abort": {
+      "already_configured": "Emulated Hue + is already configured. Only one instance is allowed."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Emulated Hue +",
+        "description": "**Devices:**\n{device_list}",
+        "menu_options": {
+          "add_device": "Add Device",
+          "edit_device": "Edit Device",
+          "delete_device": "Delete Device",
+          "settings": "Settings"
+        }
+      },
+      "add_device": {
+        "title": "Add Hue Device",
+        "description": "Create a new virtual Hue device for Alexa.",
+        "data": {
+          "name": "Device name",
+          "entity_id": "Home Assistant entity"
+        },
+        "data_description": {
+          "name": "The name Alexa will use for this device.",
+          "entity_id": "The Home Assistant entity to control. Leave empty to create an unlinked device."
+        }
+      },
+      "edit_device": {
+        "title": "Edit Device",
+        "description": "Select a device to edit.",
+        "data": {
+          "device_id": "Device"
+        }
+      },
+      "edit_device_details": {
+        "title": "Edit: {device_name}",
+        "description": "Hue ID: {hue_id}\nLast accessed: {last_access}",
+        "data": {
+          "name": "Device name",
+          "entity_id": "Home Assistant entity"
+        },
+        "data_description": {
+          "name": "The name Alexa will use for this device.",
+          "entity_id": "The Home Assistant entity to control. Clear to unlink."
+        }
+      },
+      "delete_device": {
+        "title": "Delete Device",
+        "description": "Select a device to permanently delete.\n\n**Warning:** Deleted device IDs are permanently retired and never reused to prevent orphaned Alexa devices.",
+        "data": {
+          "device_id": "Device"
+        }
+      },
+      "settings": {
+        "title": "Bridge Settings",
+        "description": "Configure the emulated Hue bridge network settings.",
+        "data": {
+          "listen_port": "Listen port",
+          "advertise_ip": "Advertise IP (optional)",
+          "advertise_port": "Advertise port (optional)"
+        },
+        "data_description": {
+          "listen_port": "Port for the emulated Hue bridge. Use 80 for Alexa compatibility.",
+          "advertise_ip": "IP address to advertise to Alexa. Leave empty for auto-detect.",
+          "advertise_port": "Port to advertise to Alexa. Leave empty to use the listen port."
+        }
+      }
+    },
+    "error": {
+      "entity_invalid": "The selected entity is not valid or not supported.",
+      "entity_already_linked": "This entity is already linked to another Hue device.",
+      "create_failed": "Failed to create device.",
+      "update_failed": "Failed to update device."
+    },
+    "abort": {
+      "no_devices": "No devices configured yet. Add a device first.",
+      "device_not_found": "Device not found.",
+      "unknown_error": "An unknown error occurred."
+    }
+  }
+}
