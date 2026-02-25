@@ -1,6 +1,7 @@
 # Emulated Hue +
 
 [![hacs_badge](https://img.shields.io/badge/HACS-Custom-orange.svg)](https://github.com/custom-components/hacs)
+[![GitHub release](https://img.shields.io/github/release/richardctrimble/ha-emulated-hue.svg)](https://github.com/richardctrimble/ha-emulated-hue/releases/)
 
 A custom [Home Assistant](https://www.home-assistant.io/) integration that emulates a Philips Hue bridge, allowing Amazon Alexa to discover and control Home Assistant entities via voice commands — all configured through the UI.
 
@@ -13,10 +14,7 @@ A custom [Home Assistant](https://www.home-assistant.io/) integration that emula
 - **Stable device IDs** — deleted Hue IDs are permanently retired and never reused, preventing orphaned devices in the Alexa app.
 - **Full device management** — add, edit, delete, and list virtual Hue devices through the options flow.
 - **Flexible entity linking** — link a Hue device to any supported entity, change the link later, or leave it unlinked.
-
-## Supported entity domains
-
-`light`, `switch`, `fan`, `cover`, `climate`, `media_player`, `script`, `scene`, `input_boolean`
+- **Supported entity domains** — `light`, `switch`, `fan`, `cover`, `climate`, `media_player`, `script`, `scene`, `input_boolean`
 
 ## Installation
 
