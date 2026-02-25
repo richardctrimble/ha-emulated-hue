@@ -78,7 +78,7 @@ The integration registers the following services for development and testing:
 
 ## Licence
 
-Released under the [MIT Licence](https://github.com/richardctrimble/ha-emulated-hue/blob/master/LICENSE).
+Released under the [MIT Licence](LICENSE).
 
 ### Attribution
 
